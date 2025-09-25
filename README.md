@@ -148,4 +148,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**🚧 Project Status:** Work in Progress | **📅 Started:** December 2024 | **👨‍💻 Developer:** [ Lavya]
+**🚧 Project Status:** Work in Progress | **📅 Started:** September 2025 | **👨‍💻 Developer:** Lavya
