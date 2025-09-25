@@ -26,7 +26,7 @@ export default function Home() {
               Join the crew and embark on the greatest adventure of your lifetime! Our revolutionary crowdfunding platform connects aspiring pirates with generous supporters who believe in the power of dreams and determination.
             </p>
             <p className="text-base text-center leading-relaxed">
-              Whether you're setting sail to find the legendary One Piece, exploring uncharted islands in the New World, or simply need the perfect straw hat to begin your journey, we're here to help make your pirate dreams come true. Every great adventure starts with a single step - and sometimes, a little help from fellow adventurers who understand the call of the sea.
+              Whether you are setting sail to find the legendary One Piece, exploring uncharted islands in the New World, or simply need the perfect straw hat to begin your journey, we are here to help make your pirate dreams come true. Every great adventure starts with a single step - and sometimes, a little help from fellow adventurers who understand the call of the sea.
             </p>
           </div>
           <button className='border border-white bg-gradient-to-r from-red-500 via-yellow-400 to-yellow-500 rounded-3xl p-3 mt-4 cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out hover:border-yellow-500 '><p className='text-white text-center
