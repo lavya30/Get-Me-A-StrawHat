@@ -20,7 +20,7 @@ export default function Home() {
         <div className="backdrop-blur-xs bg-white/10 rounded-xl border border-white/20 p-6 shadow-xl flex flex-col items-center font-bold w-150 h-120 "
           data-aos="fade-up" data-aos-duration="3000">
 
-          <h1 className="text-4xl  text-center bg-gradient-to-r from-red-500 via-yellow-400 to-yellow-500 bg-clip-text text-transparent "> Get Me a StrawHat</h1>
+          <h1 className="text-4xl  text-center bg-gradient-to-r from-red-500 via-yellow-400 to-yellow-500 bg-clip-text text-transparent "> Get Me a StrawHat <span className="tenor-gif-embed" data-postid="6558192108222740508" data-share-method="host" data-aspect-ratio="2" data-width="100%"></span></h1>
           <div className="text-white/80 mt-4 max-w-2xl">
             <p className="text-lg text-center leading-relaxed mb-4">
               Join the crew and embark on the greatest adventure of your lifetime! Our revolutionary crowdfunding platform connects aspiring pirates with generous supporters who believe in the power of dreams and determination.
@@ -29,6 +29,7 @@ export default function Home() {
               Whether you are setting sail to find the legendary One Piece, exploring uncharted islands in the New World, or simply need the perfect straw hat to begin your journey, we are here to help make your pirate dreams come true. Every great adventure starts with a single step - and sometimes, a little help from fellow adventurers who understand the call of the sea.
             </p>
           </div>
+          
           <button className='border border-white bg-gradient-to-r from-red-500 via-yellow-400 to-yellow-500 rounded-3xl p-3 mt-4 cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out hover:border-yellow-500 '><p className='text-white text-center
         ' >buy me a StrawHat</p></button>
         </div>

@@ -52,10 +52,11 @@ const Navbar = () => {
         {/* Action Buttons */}
         <div className="hidden items-center gap-3 sm:flex">
           <Link
-            href="#account"
-            className="rounded-full border-2 border-amber-300/50 px-4 py-2 text-sm font-semibold tracking-wide text-amber-100 transition hover:border-amber-300 hover:bg-amber-400/20 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
+            href={"/Login"}
+           
           >
-            Join Crew
+            <button className=" cursor-pointer rounded-full border-2 border-amber-300/50 px-4 py-2 text-sm font-semibold tracking-wide text-amber-100 transition hover:border-amber-300 hover:bg-amber-400/20 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300">Join Crew</button>
+              
           </Link>
           <Link
             href="#shop"
