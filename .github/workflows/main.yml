@@ -1,0 +1,47 @@
+name: CI/CD Pipeline
+
+# Run this workflow on push to main or pull requests to main
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+# Jobs to run
+jobs:
+  build-and-test:
+    # Use the latest Ubuntu runner
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        # Use the latest Node.js LTS version
+        node-version: [20]
+    
+    steps:
+    # Check out the repository code
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    # Set up Node.js environment
+    - name: Setup Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    
+    # Install dependencies
+    - name: Install dependencies
+      run: npm ci
+    
+    # Run linting
+    - name: Run linter
+      run: npm run lint
+    
+    # Run tests (if test script exists)
+    - name: Run tests
+      run: npm test --if-present
+    
+    # Build the project
+    - name: Build project
+      run: npm run build
