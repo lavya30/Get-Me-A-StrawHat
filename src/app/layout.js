@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import SessionWrapper from "@/components/SessionWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,19 +26,20 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Animated Quantum Network Background */}
-        <AnimatedBackground />
+        <SessionWrapper>
+          {/* Animated Quantum Network Background */}
+          <AnimatedBackground />
 
-        {/* Main Layout */}
-        <div className="relative min-h-screen flex flex-col">
-          <Navbar />
-          <main className="flex-1">
-            {children}
-          </main>
+          {/* Main Layout */}
+          <div className="relative min-h-screen flex flex-col">
+       
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </div>
           
-          <Footer />
-        </div>
-
+        </SessionWrapper>
       </body>
     </html>
   );
