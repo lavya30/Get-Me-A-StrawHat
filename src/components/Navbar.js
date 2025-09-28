@@ -178,7 +178,7 @@ const Navbar = () => {
                       }}
                       role="menuitem"
                     >
-                      <span className="relative z-10">Sign out</span>
+                      <span className="relative z-10 cursor-pointer ">Sign out</span>
                       <div className="absolute inset-0 bg-gradient-to-r from-red-700 to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></div>
                     </button>
                   </div>
