@@ -19,7 +19,10 @@ export default function Home() {
       <div className="p-8 flex justify-center items-center min-h-screen">
 
 
-        <div className="backdrop-blur-xs bg-white/10 rounded-xl border border-white/20 p-6 mt-14 shadow-xl flex flex-col items-center font-bold w-150 h-120 "
+        <div className="backdrop-blur-xs bg-white/10 rounded-xl border border-white/20 p-6 mt-14
+        
+        
+        shadow-xl flex flex-col items-center font-bold w-150 h-120 "
           data-aos="fade-up" data-aos-duration="3000">
 
           <h1 className="text-4xl  text-center bg-gradient-to-r from-red-500 via-yellow-400 to-yellow-500 bg-clip-text text-transparent "> Get Me a StrawHat <span className="tenor-gif-embed" data-postid="6558192108222740508" data-share-method="host" data-aspect-ratio="2" data-width="100%"></span></h1>
