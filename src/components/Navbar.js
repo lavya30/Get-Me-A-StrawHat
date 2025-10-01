@@ -113,7 +113,7 @@ const Navbar = () => {
                   aria-expanded={isDropdownOpen}
                   aria-haspopup="true"
                 >
-                    Welcome { session.user.name }
+                  Welcome {session.user.name}
                   <svg
                     className={`w-4 h-4 transform transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}
                     xmlns="http://www.w3.org/2000/svg"
@@ -171,14 +171,14 @@ const Navbar = () => {
                     </Link>
                     <button
                       type="button"
-                      className="group text-amber-100 hover:text-white block w-full text-left px-4 py-2 text-sm transition-all duration-200 relative overflow-hidden"
+                      className="group cursor-pointer text-amber-100 hover:text-white block w-full text-left px-4 py-2 text-sm transition-all duration-200 relative overflow-hidden"
                       onClick={() => {
                         setIsDropdownOpen(false);
                         handleSignOut();
                       }}
                       role="menuitem"
                     >
-                      <span className="relative z-10 cursor-pointer ">Sign out</span>
+                      <span className="relative z-10 ">Sign out</span>
                       <div className="absolute inset-0 bg-gradient-to-r from-red-700 to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></div>
                     </button>
                   </div>

@@ -1,16 +1,40 @@
 "use client";
 import { getLocationOrigin } from 'next/dist/shared/lib/utils'
-import React from 'react'
+import React, { useEffect } from 'react'
 import './login.css'
 import { useSession, signIn, signOut } from "next-auth/react"
+import { useRouter } from 'next/navigation'
 
 const Login = () => {
+  const router = useRouter();
+  const { data: session, status } = useSession();
+
+  useEffect(() => {
+    if (status === 'authenticated') {
+      router.push('/dashboard');
+    }
+  }, [status, router]);
+
+  const handleSignIn = (provider) => {
+    signIn(provider, { callbackUrl: '/dashboard' });
+  };
+
+  if (status === 'loading') {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="backdrop-blur-md bg-white/10 p-8 rounded-xl border border-white/20 shadow-xl">
+          <p className="text-white">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className='login_container flex flex-col justify-center items-center  mt-10'>
       <h1 className='font-bold text-4xl text-center'> Login to get the StrawHat Pirates!</h1>
       <div className="  social_buttons border border-gray-300 rounded-lg shadow-md p-6 pb-20 mt-6 flex flex-col gap-4">
         <button
-          onClick={() => signIn('google')}
+          onClick={() => handleSignIn('google')}
           className=" cursor-pointer hover:scale-110 transition-transform flex items-center bg-transparent border border-gray-300 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium text-gray-800 relative overflow-hidden group hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
           <div className="absolute inset-0 w-0 bg-gradient-to-r from-red-500 via-yellow-400 to-yellow-500 transition-all duration-300 ease-out group-hover:w-full"></div>
           <div className="relative z-10 flex items-center">
@@ -42,7 +66,7 @@ const Login = () => {
 
 
 
-        <button onClick={() => signIn('linkedin')}
+        <button onClick={() => handleSignIn('linkedin')}
           className=" cursor-pointer hover:scale-110 transition-transform social-button flex items-center bg-transparent  border border-gray-300 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium text-gray-800  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
           <div className="absolute inset-0 w-0 bg-gradient-to-r from-red-500 via-yellow-400 to-yellow-500 transition-all duration-300 ease-out group-hover:w-full"></div>
           <div className="relative z-10 flex items-center">
@@ -68,8 +92,8 @@ const Login = () => {
 
 
 
-        <button onClick={() => signIn('github', { callbackUrl: "/Dashboard" })}
-          //going back to the home page after login
+        <button onClick={() => handleSignIn('github')}
+          // Redirects to dashboard after successful login
           className=" cursor-pointer hover:scale-110 transition-transform social-button flex items-center bg-transparent border border-gray-300 rounded-lg shadow-md max-w-xs px-6 py-2 text-sm font-medium text-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
           <svg className="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 73 73" version="1.1">
@@ -94,6 +118,15 @@ const Login = () => {
 
 
 
+        {/* Registration Link */}
+        <div className="mt-8 text-center">
+          <p className="text-gray-300">
+            Don't have an account?{' '}
+            <a href="/register" className="text-amber-400 hover:text-amber-300 underline">
+              Create an account
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   )
