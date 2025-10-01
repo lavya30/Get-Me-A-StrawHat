@@ -28,7 +28,7 @@ export default function Dashboard() {
           <h2 className="text-2xl font-bold mb-4 text-white">Recent Activity</h2>
           <ul className="space-y-4">
             <li className="bg-white/5 p-4 rounded-lg border border-white/10">
-              <span className="font-semibold text-amber-300">lavya</span> donated <span className="font-bold">30rs</span> with a message: <span className="italic text-gray-300">"Thank you for the adventure!"</span>
+              <span className="font-semibold text-amber-300">lavya</span> donated <span className="font-bold">30rs</span> with a message: <span className="italic text-gray-300">&ldquo;Thank you for the adventure!&rdquo;</span>
             </li>
             <li className="bg-white/5 p-4 rounded-lg border border-white/10">
               <span className="font-semibold text-amber-300">sanji</span> joined your crew!
@@ -39,7 +39,7 @@ export default function Dashboard() {
           </ul>
         </div>
         {/* Call to Action */}
-        
+
       </main>
     </div>
   );
