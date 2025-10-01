@@ -123,11 +123,10 @@ const Login = () => {
         <div className="mt-8 text-center">
           <p className="text-gray-300">
             Do not have an account?{' '}
-<<<<<<< HEAD
+
+
+
             <Link href="/register" className="text-amber-400 hover:text-amber-300 underline">
-=======
-            <a href="/register" className="text-amber-400 hover:text-amber-300 underline">
->>>>>>> d3db42fc0f560d89c9f64c93fae571cdba377c29
               Create an account
             </Link>
           </p>
