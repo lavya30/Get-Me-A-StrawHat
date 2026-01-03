@@ -110,5 +110,4 @@ const UserPage = ({ params }) => {
     </div>
   )
 }
-
 export default UserPage
