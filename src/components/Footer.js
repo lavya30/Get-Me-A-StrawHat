@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
-
   const footerLinks = {
     adventure: [
       { label: 'Grand Line', href: '#grand-line' },
