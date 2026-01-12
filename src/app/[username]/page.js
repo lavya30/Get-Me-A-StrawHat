@@ -41,7 +41,6 @@ const UserPage = ({ params }) => {
           </div>
 
 
-
           <div className=' mt-2 font-bold  text-xl  text-white '>{params.username}</div>
           <div className='mt-1 text-sm text-slate-500'>One Piece Fan</div>
           <div className='mt-1 text-sm  text-slate-500'> 123 Members 123 followers</div>
