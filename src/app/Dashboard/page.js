@@ -39,7 +39,6 @@ export default function Dashboard() {
           </ul>
         </div>
         {/* Call to Action */}
-
       </main>
     </div>
   );
