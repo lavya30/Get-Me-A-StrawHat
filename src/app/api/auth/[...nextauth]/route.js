@@ -17,7 +17,7 @@ export const authoptions = NextAuth({
       clientId: process.env.LINKEDIN_ID,
       clientSecret: process.env.LINKEDIN_SECRET
     }),
-    
+   
     // FacebookProvider({
     //   clientId: process.env.FACEBOOK_ID,
     //   clientSecret: process.env.FACEBOOK_SECRET
