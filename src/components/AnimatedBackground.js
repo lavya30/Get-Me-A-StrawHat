@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from 'react'
 
 const AnimatedBackground = () => {
   const canvasRef = useRef(null)
-
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
